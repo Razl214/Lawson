@@ -2,5 +2,5 @@
 
 # Tutorial
 
-This is a tutorial where you will learn how to create Git
-repositories from your projects and share them on GitHub.
+This is a test project where you will learn how to work
+with the most popular Git operations.
