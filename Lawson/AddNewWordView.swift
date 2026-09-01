@@ -74,5 +74,5 @@ struct AddNewWordView: View {
 }
 
 #Preview {
-    AddNewWordView(texfieldVar: "Текст")
+    AddNewWordView(texfieldVar: "Текстфилд")
 }
