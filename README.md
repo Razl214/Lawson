@@ -5,4 +5,4 @@
 This is a test project where you will learn how to work
 with the most popular Git operations.
 
-Some trext for pull request
+Some text for pull request
