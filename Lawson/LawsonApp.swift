@@ -11,7 +11,9 @@ import SwiftUI
 struct LawsonApp: App {
     var body: some Scene {
         WindowGroup {
-            AddNewWordView(texfieldVar: "example")
+            AllWordsView(searchText: "Search")
+                //.background(Color("backgroundColor"))
+            
         }
     }
 }
