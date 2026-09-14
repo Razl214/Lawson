@@ -15,8 +15,14 @@ struct AllWordsView: View {
         Word(word: "Sun", translate: "Солнце"),
         Word(word: "Summer", translate: "Лето"),
         Word(word: "Music", translate: "Музыка"),
+        Word(word: "sdfghsflihgsdilgbsfgbdisflgbldksfgbdfkslhb", translate: "123123")
         
     ]
+    
+    //TODO: make private method - recieve and delete data from viewmodel
+    /*
+     
+     */
     
     @State var searchText: String
     @State private var isShowingAddSheet = false

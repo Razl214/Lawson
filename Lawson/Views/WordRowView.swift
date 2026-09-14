@@ -28,7 +28,22 @@ struct WordRowView: View {
             }
             
             Spacer()
+            
+            Button(action: {
+                // показать ImagePicker
+            }) { VStack {
+                Image("PlayButton")
+
+            }
+                
+                // )
+            }
+            .buttonStyle(PlainButtonStyle()) // убираем стандартное выделение кнопки
         }
-        .padding(.vertical, 6)
+        .padding()
     }
+}
+
+#Preview {
+    WordRowView(word: .init(word: "Hello", translate: "Privet"))
 }

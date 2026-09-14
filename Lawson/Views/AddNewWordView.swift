@@ -20,10 +20,10 @@ struct AddNewWordView: View {
                     // показать ImagePicker
                 }) { VStack {
                     Image("ChooseImage")
-                        //.font(.largeTitle)
-                        //.foregroundColor(.gray)
-                        //.foregroundColor(.gray)
-                        //.font(.subheadline)
+                    //.font(.largeTitle)
+                    //.foregroundColor(.gray)
+                    //.foregroundColor(.gray)
+                    //.font(.subheadline)
                 }
                     
                     // )
@@ -113,8 +113,8 @@ struct AddNewWordView: View {
                 }
                 
             }
-//            .navigationTitle("New word")
-//            .navigationBarTitleDisplayMode(.inline)
+            //            .navigationTitle("New word")
+            //            .navigationBarTitleDisplayMode(.inline)
             //.background(.red)
         }
         //.ignoresSafeArea()
