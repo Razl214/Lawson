@@ -2,7 +2,7 @@
 //  LawsonApp.swift
 //  Lawson
 //
-//  Created by Руслан Кашапов on 24.08.2026.
+//  Created by Руслан Кашапов on 14.09.2026.
 //
 
 import SwiftUI

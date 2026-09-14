@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BE12B1FC303C50EA00EAC884 /* Lawson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lawson.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED726FD30582C5D00BEE8CD /* Lawson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lawson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BE12B22E303C56B400EAC884 /* Exceptions for "Lawson" folder in "Lawson" target */ = {
+		BED7274430582D0800BEE8CD /* Exceptions for "Lawson" folder in "Lawson" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = BE12B1FB303C50EA00EAC884 /* Lawson */;
+			target = BED726FC30582C5D00BEE8CD /* Lawson */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BE12B1FE303C50EA00EAC884 /* Lawson */ = {
+		BED726FF30582C5D00BEE8CD /* Lawson */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				BE12B22E303C56B400EAC884 /* Exceptions for "Lawson" folder in "Lawson" target */,
+				BED7274430582D0800BEE8CD /* Exceptions for "Lawson" folder in "Lawson" target */,
 			);
 			path = Lawson;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BE12B1F9303C50EA00EAC884 /* Frameworks */ = {
+		BED726FA30582C5D00BEE8CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE12B1F3303C50EA00EAC884 = {
+		BED726F430582C5D00BEE8CD = {
 			isa = PBXGroup;
 			children = (
-				BE12B1FE303C50EA00EAC884 /* Lawson */,
-				BE12B1FD303C50EA00EAC884 /* Products */,
+				BED726FF30582C5D00BEE8CD /* Lawson */,
+				BED726FE30582C5D00BEE8CD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BE12B1FD303C50EA00EAC884 /* Products */ = {
+		BED726FE30582C5D00BEE8CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE12B1FC303C50EA00EAC884 /* Lawson.app */,
+				BED726FD30582C5D00BEE8CD /* Lawson.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE12B1FB303C50EA00EAC884 /* Lawson */ = {
+		BED726FC30582C5D00BEE8CD /* Lawson */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE12B207303C50EC00EAC884 /* Build configuration list for PBXNativeTarget "Lawson" */;
+			buildConfigurationList = BED7270830582C5E00BEE8CD /* Build configuration list for PBXNativeTarget "Lawson" */;
 			buildPhases = (
-				BE12B1F8303C50EA00EAC884 /* Sources */,
-				BE12B1F9303C50EA00EAC884 /* Frameworks */,
-				BE12B1FA303C50EA00EAC884 /* Resources */,
+				BED726F930582C5D00BEE8CD /* Sources */,
+				BED726FA30582C5D00BEE8CD /* Frameworks */,
+				BED726FB30582C5D00BEE8CD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BE12B1FE303C50EA00EAC884 /* Lawson */,
+				BED726FF30582C5D00BEE8CD /* Lawson */,
 			);
 			name = Lawson;
 			packageProductDependencies = (
 			);
 			productName = Lawson;
-			productReference = BE12B1FC303C50EA00EAC884 /* Lawson.app */;
+			productReference = BED726FD30582C5D00BEE8CD /* Lawson.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BE12B1F4303C50EA00EAC884 /* Project object */ = {
+		BED726F530582C5D00BEE8CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					BE12B1FB303C50EA00EAC884 = {
+					BED726FC30582C5D00BEE8CD = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
 			};
-			buildConfigurationList = BE12B1F7303C50EA00EAC884 /* Build configuration list for PBXProject "Lawson" */;
+			buildConfigurationList = BED726F830582C5D00BEE8CD /* Build configuration list for PBXProject "Lawson" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BE12B1F3303C50EA00EAC884;
+			mainGroup = BED726F430582C5D00BEE8CD;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = BE12B1FD303C50EA00EAC884 /* Products */;
+			productRefGroup = BED726FE30582C5D00BEE8CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE12B1FB303C50EA00EAC884 /* Lawson */,
+				BED726FC30582C5D00BEE8CD /* Lawson */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BE12B1FA303C50EA00EAC884 /* Resources */ = {
+		BED726FB30582C5D00BEE8CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BE12B1F8303C50EA00EAC884 /* Sources */ = {
+		BED726F930582C5D00BEE8CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BE12B205303C50EC00EAC884 /* Debug */ = {
+		BED7270630582C5E00BEE8CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -202,7 +202,7 @@
 			};
 			name = Debug;
 		};
-		BE12B206303C50EC00EAC884 /* Release */ = {
+		BED7270730582C5E00BEE8CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,7 +259,7 @@
 			};
 			name = Release;
 		};
-		BE12B208303C50EC00EAC884 /* Debug */ = {
+		BED7270930582C5E00BEE8CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -292,7 +292,7 @@
 			};
 			name = Debug;
 		};
-		BE12B209303C50EC00EAC884 /* Release */ = {
+		BED7270A30582C5E00BEE8CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -328,25 +328,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE12B1F7303C50EA00EAC884 /* Build configuration list for PBXProject "Lawson" */ = {
+		BED726F830582C5D00BEE8CD /* Build configuration list for PBXProject "Lawson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE12B205303C50EC00EAC884 /* Debug */,
-				BE12B206303C50EC00EAC884 /* Release */,
+				BED7270630582C5E00BEE8CD /* Debug */,
+				BED7270730582C5E00BEE8CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE12B207303C50EC00EAC884 /* Build configuration list for PBXNativeTarget "Lawson" */ = {
+		BED7270830582C5E00BEE8CD /* Build configuration list for PBXNativeTarget "Lawson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE12B208303C50EC00EAC884 /* Debug */,
-				BE12B209303C50EC00EAC884 /* Release */,
+				BED7270930582C5E00BEE8CD /* Debug */,
+				BED7270A30582C5E00BEE8CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BE12B1F4303C50EA00EAC884 /* Project object */;
+	rootObject = BED726F530582C5D00BEE8CD /* Project object */;
 }
