@@ -52,6 +52,7 @@ struct AllWordsView: View {
             }
             .sheet(isPresented: $isShowingAddSheet) {
                 AddNewWordView(texfieldVar: "???")
+                    .background(Color("backgroundColor"))
             }
             .toolbarBackground(.visible, for: .navigationBar)
         }
