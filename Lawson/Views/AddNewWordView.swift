@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct AddNewWordView: View {
-    @State private var word = ""
-    @State private var translation = ""
     
     @State var wordTF: String = ""
     @State var translationTF: String = ""
-    @StateObject private var vm = AddWordViewModel()
+    @State var vm: AddWordViewModel = .init()
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         
@@ -52,7 +51,7 @@ struct AddNewWordView: View {
                     AddNewWordTF(word: $wordTF, placeholder: "Введите слово")
                     
                     //TextField("Введите слово", text: $texfieldVar)
-                    //.textFieldStyle(.roundedBorder)
+
                     Divider()
                 }
                 .tracking(0.25)
@@ -106,10 +105,15 @@ struct AddNewWordView: View {
             Spacer()
             
             Button("Сохранить") {
-                let newWord = Word(word: "Test", translate: "test")
+                let newWord = Word(word: wordTF, translate: translationTF)
                 print("Save new word")
+                vm.addWord(newWord)
+                    dismiss()
             }
-            .disabled(word.isEmpty || translation.isEmpty)
+            //.disabled(wordTF.isEmpty || translationTF.isEmpty)
+            
+            if vm.isError { Text(vm.errorMessage).foregroundStyle(.red)
+            }
         }
         .padding([.leading, .trailing], 23)
     }
@@ -117,6 +121,6 @@ struct AddNewWordView: View {
 }
 
 #Preview {
-    AddNewWordView()
+    AddNewWordView(vm: .init())
         .background(Color("backgroundColor"))
 }

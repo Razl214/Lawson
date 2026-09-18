@@ -9,14 +9,16 @@ import SwiftUI
 
 struct AllWordsView: View {
     
-    @State private var wordsArray = [
-        Word(word: "Book", translate: "Книга"),
-        Word(word: "Car", translate: "Машина"),
-        Word(word: "Sun", translate: "Солнце"),
-        Word(word: "Summer", translate: "Лето"),
-        Word(word: "Music", translate: "Музыка"),
-        
-    ]
+    @State private var vm: AllWordsVM = .init()
+    
+//    @State private var wordsArray = [
+//        Word(word: "Book", translate: "Книга"),
+//        Word(word: "Car", translate: "Машина"),
+//        Word(word: "Sun", translate: "Солнце"),
+//        Word(word: "Summer", translate: "Лето"),
+//        Word(word: "Music", translate: "Музыка"),
+//        
+//    ]
     
     @State var searchText: String
     @State private var isShowingAddSheet = false
@@ -24,9 +26,9 @@ struct AllWordsView: View {
     var body: some View {
         
         NavigationStack {
-            List(wordsArray) { word in
+            List(vm.wordsArray) { word in
                 NavigationLink {
-                    
+                    //TODO: сделать логику свайпа удаления(метод будет во вм), здесь вызываем метод удаления. Таблица сама удалила строчку и обновила таблицу
                     Text("TODO: сюда поставить вью подробного экрана слова \(word.word)") }
                 label: {
                         WordRowView(word: word)

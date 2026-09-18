@@ -8,10 +8,20 @@
 import Foundation
 internal import Combine
 
-enum AddWordError: Error {
+enum AddWordError: Error, LocalizedError {
     case textfieldIsEmpty
     case imageIsEmpty
+    
+    var errorDescription: String {
+        switch self {
+        case .textfieldIsEmpty:
+            return "Textfield is empty"
+        case .imageIsEmpty:
+            return "Image is empty"
+        }
+    }
 }
+
 
 enum AlertSelectionActions {
     case camera
@@ -21,25 +31,34 @@ enum AlertSelectionActions {
 }
 
 @MainActor // - зачем его ставить на все viewmodel?
-final class AddWordViewModel: ObservableObject {
-    @Published var word = ""
-    @Published var translation = ""
+@Observable
+final class AddWordViewModel {
+    var wordsArray = Mock.wordsArray
     
-    var isFormValid: Bool {
-        //!word.isEmpty && !translation.isEmpty
-        word.isEmpty == false && translation.isEmpty == false
+    var isError: Bool = false
+    var errorMessage: String = ""
+
+    func addWord(_ word: Word) {
+        do {
+            //TODO: создание объекта Word слова и после прохождения проверки добавление в коллекцию
+            try validate(word)
+            wordsArray.append(word)
+        } catch let error as AddWordError {
+            isError = true
+            errorMessage = "\(error.errorDescription)"
+        } catch {
+            isError = true
+            errorMessage = "\(error.localizedDescription)"
+        
+        }
     }
     
-//    func saveWord () {
-//        guard   let word = word,
-//                let translation = translation
-//        word.isEmpty == false,
-//        translation.isEmpty == false
-//        else {
-//            print("Can't save, empty word or translate")
-//            //TODO: make ALERT that some fileds are empty
-//            return
-//        }
-//    }
-//    
+    private func validate(_ word: Word) throws {
+        //TODO: добавить проверку слов, чтобы состояло из букв
+        guard !word.word.isEmpty && !word.translate.isEmpty
+        else {
+            throw AddWordError.textfieldIsEmpty
+        }
+    }
+    
 }
