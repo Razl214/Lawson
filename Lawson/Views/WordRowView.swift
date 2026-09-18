@@ -30,5 +30,6 @@ struct WordRowView: View {
             Spacer()
         }
         .padding(.vertical, 6)
+        //.navigationTitle(word.word)
     }
 }

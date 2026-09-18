@@ -27,21 +27,24 @@ struct AllWordsView: View {
             List(wordsArray) { word in
                 NavigationLink {
                     
-                    Text("\(word.word)") } label: {
+                    Text("TODO: сюда поставить вью подробного экрана слова \(word.word)") }
+                label: {
                         WordRowView(word: word)
-                        
                     }
             }
             .listStyle(.insetGrouped)
             
             .navigationTitle("Все слова")
             .navigationBarTitleDisplayMode(.automatic)
+            
             .searchable(text: $searchText, prompt: "Поиск слова")
+            
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                       isShowingAddSheet = true
-                    } label: {
+                    }
+                    label: {
                         Image(systemName: "plus")
                             .font(.title3.weight(.semibold))
                             .foregroundStyle(.black)
@@ -51,8 +54,10 @@ struct AllWordsView: View {
                 }
             }
             .sheet(isPresented: $isShowingAddSheet) {
-                AddNewWordView(texfieldVar: "???")
-                    .background(Color("backgroundColor"))
+                NavigationStack {
+                    AddNewWordView()
+                        .background(Color("backgroundColor"))
+                }
             }
             .toolbarBackground(.visible, for: .navigationBar)
         }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Word: Identifiable {
-    let id = UUID()
+struct Word: Identifiable, Hashable {
+    let id = UUID() // уникальный идентификатор (нужен для списков)
     
-    let word: String
-    let translate: String
+    let word: String // слово на иностранном языке
+    let translate: String // перевод слова на родном языке
     
 //    init(word: String, translate: String) {
 //        self.word = word
