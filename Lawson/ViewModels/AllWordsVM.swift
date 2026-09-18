@@ -13,6 +13,7 @@ import SwiftUI
 final class AllWordsVM {
      var wordsArray = Mock.wordsArray
     
+    
     // тут сделать метод удаления слова
     
     func getWords() -> [Word] {
