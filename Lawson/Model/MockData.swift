@@ -5,11 +5,12 @@
 //  Created by Руслан Кашапов on 18.09.2026.
 //
 
-import Foundation
+import SwiftUI
 
 @Observable
 final class Mock {
-    static var wordsArray = [
+    
+    static var words = [
         Word(word: "Book", translate: "Книга"),
         Word(word: "Car", translate: "Машина"),
         Word(word: "Sun", translate: "Солнце"),
