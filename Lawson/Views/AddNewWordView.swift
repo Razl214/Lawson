@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AddNewWordView: View {
+
     
     @State var wordTF: String = ""
     @State var translationTF: String = ""
-    @State var vm: AddWordViewModel = .init()
+    @State var vm: AddNewWordVM
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -105,6 +106,7 @@ struct AddNewWordView: View {
             Spacer()
             
             Button("Сохранить") {
+                // забирать готовый объект Word(со словом, переводом и картинкой) с вьюмодели и работать с этим объектом в этой кнопке
                 let newWord = Word(word: wordTF, translate: translationTF)
                 print("Save new word")
                 vm.addWord(newWord)
@@ -112,7 +114,7 @@ struct AddNewWordView: View {
             }
             //.disabled(wordTF.isEmpty || translationTF.isEmpty)
             
-            if vm.isError { Text(vm.errorMessage).foregroundStyle(.red)
+            if !vm.isError { Text(vm.errorMessage).foregroundStyle(.red)
             }
         }
         .padding([.leading, .trailing], 23)
@@ -121,6 +123,6 @@ struct AddNewWordView: View {
 }
 
 #Preview {
-    AddNewWordView(vm: .init())
+    AddNewWordView(vm: .init(store: .init()))
         .background(Color("backgroundColor"))
 }

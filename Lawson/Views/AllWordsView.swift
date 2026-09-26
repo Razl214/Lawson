@@ -9,32 +9,28 @@ import SwiftUI
 
 struct AllWordsView: View {
     
-    @State private var vm: AllWordsVM = .init()
+    @ObservedObject var vm: AllWordsVM
     
-//    @State private var wordsArray = [
-//        Word(word: "Book", translate: "Книга"),
-//        Word(word: "Car", translate: "Машина"),
-//        Word(word: "Sun", translate: "Солнце"),
-//        Word(word: "Summer", translate: "Лето"),
-//        Word(word: "Music", translate: "Музыка"),
-//        
-//    ]
-    
-    @State var searchText: String
+    @State private var searchText: String = ""
     @State private var isShowingAddSheet = false
     
     var body: some View {
         
         NavigationStack {
-            List(vm.wordsArray) { word in
-                NavigationLink {
-                    //TODO: сделать логику свайпа удаления(метод будет во вм), здесь вызываем метод удаления. Таблица сама удалила строчку и обновила таблицу
-                    Text("TODO: сюда поставить вью подробного экрана слова \(word.word)") }
-                label: {
+            List{
+                ForEach(/*vm.wordsArray*/vm.store.getAllWords()) { word in
+                    NavigationLink {
+                        //TODO: сделать логику свайпа удаления(метод будет во вм), здесь вызываем метод удаления. Таблица сама удалила строчку и обновила таблицу
+                        Text("TODO: сюда поставить вью подробного экрана слова \(word.word)") }
+                    label: {
                         WordRowView(word: word)
                     }
+                }
+                .onDelete { offsets in vm.delete(at: offsets)
+                }
             }
             .listStyle(.insetGrouped)
+            
             
             .navigationTitle("Все слова")
             .navigationBarTitleDisplayMode(.automatic)
@@ -57,7 +53,7 @@ struct AllWordsView: View {
             }
             .sheet(isPresented: $isShowingAddSheet) {
                 NavigationStack {
-                    AddNewWordView()
+                    AddNewWordView(vm: AddNewWordVM(store: vm.store))
                         .background(Color("backgroundColor"))
                 }
             }
@@ -67,5 +63,5 @@ struct AllWordsView: View {
 }
 
 #Preview {
-    AllWordsView(searchText: "Поиск слова")
+    AllWordsView(vm: AllWordsVM(store: .init()))
 }
