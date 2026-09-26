@@ -11,7 +11,7 @@ enum CustomFonts: String {
     case montserratExtraLight = "Montserrat-ExtraLight"
     case montserratRegular = "Montserrat-Regular"
     case montserratSemibold = "Montserrat-Semibold"
-    case montserratThin = "Montserrat-Thing"
+    case montserratThin = "Montserrat-Thin"
 }
 
 extension Font {
