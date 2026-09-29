@@ -9,10 +9,11 @@ import SwiftUI
 
 struct AddNewWordView: View {
 
-    
     @State var wordTF: String = ""
     @State var translationTF: String = ""
+    
     @State var vm: AddNewWordVM
+    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -112,7 +113,7 @@ struct AddNewWordView: View {
                     dismiss()
                 }
             }
-            //.disabled(wordTF.isEmpty || translationTF.isEmpty)
+//            .disabled(wordTF.isEmpty || translationTF.isEmpty)
             
             if vm.isError { Text(vm.errorMessage).foregroundStyle(.red)
             }

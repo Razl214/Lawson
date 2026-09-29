@@ -9,11 +9,11 @@ import SwiftUI
 
 struct AddNewWordTF: View {
     
-    @State var word: Binding<String>
-    var placeholder: String
+    @Binding var word: String
+    let placeholder: String
     
     var body: some View {
-        TextField(placeholder, text: word)
+        TextField(placeholder, text: $word)
             .font(.custom(.montserratRegular, size: 16))
             //.padding()
             .background(.white)
