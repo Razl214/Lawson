@@ -13,6 +13,7 @@ import SwiftUI
 final class WordsStore {
     
     private var words: [Word] = Mock.words
+//    private(set) var words: [Word] = Mock.words
     
     func add(_ word: Word) {
         words.append(word)
