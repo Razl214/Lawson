@@ -33,8 +33,9 @@ enum AlertSelectionActions {
 @MainActor // - зачем его ставить на все viewmodel?
 @Observable
 final class AddNewWordVM {
-    
-   private let store: WordsStore
+
+   private let store: WordsStore // is it computed property?
+    //that instance need call property and methods WordsStore's class
 
     var isError: Bool = false
     var errorMessage: String = ""
@@ -49,7 +50,7 @@ final class AddNewWordVM {
             try validate(word)
             store.add(word)
             
-            isError = false
+            isError = false //старое состояние ошибки может остаться, если не сбросить значение
             errorMessage = ""
             
             return true

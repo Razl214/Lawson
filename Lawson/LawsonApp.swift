@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct LawsonApp: App {
     
+    //TODO: Если убрать здесь store, то ничего не изменится. Зачем он тут нужен? И зачем его создаем в каждой из viewModel?
     private var store: WordsStore
     @StateObject var vm: AllWordsVM
     
