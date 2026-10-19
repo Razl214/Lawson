@@ -9,14 +9,14 @@ import Observation
 import SwiftUI
 
 
-@Observable
+@Observable// Observation работает через отслеживание того, какие observable properties реально читает View. Apple прямо отмечает, что при @Observable SwiftUI обновляет View, когда изменяется observable property, которую читает body.
 final class WordsStore {
     
-    private var words: [Word] = Mock.words
+    private var words: [Word] = Mock.words // - Single Source of the Truth!
 //    private(set) var words: [Word] = Mock.words
     
-    func add(_ word: Word) {
-        words.append(word)
+    func add(_ newWord: Word) {
+        words.append(newWord)
     }
     
     func delete(at offsets: IndexSet) {
@@ -27,4 +27,11 @@ final class WordsStore {
         words
     }
     
+}
+
+class SuperStore {
+    
+    static let shared: SuperStore = SuperStore()
+    
+    private init() {}
 }
