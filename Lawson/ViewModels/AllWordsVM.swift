@@ -8,8 +8,8 @@
 import SwiftUI
 internal import Combine
 
-
-final class AllWordsVM: ObservableObject {
+@Observable
+final class AllWordsVM {
  //    var wordsArray = Mock.wordsArray
     // тут сделать метод удаления слова
     

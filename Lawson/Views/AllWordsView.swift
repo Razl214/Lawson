@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AllWordsView: View {
     
-    @ObservedObject var vm: AllWordsVM
+    var vm: AllWordsVM
     
     @State private var searchText: String = ""
     @State private var isShowingAddSheet = false
@@ -18,7 +18,7 @@ struct AllWordsView: View {
         
         NavigationStack {
             List{
-                ForEach(/*vm.wordsArray*/vm.store.getAllWords()) { word in
+                ForEach(vm.store.getAllWords()) { word in
                     NavigationLink {
                         //TODO: сделать логику свайпа удаления(метод будет во вм), здесь вызываем метод удаления. Таблица сама удалила строчку и обновила таблицу
                         Text("TODO: сюда поставить вью подробного экрана слова \(word.word)") }

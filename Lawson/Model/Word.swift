@@ -14,8 +14,8 @@ struct Word: Identifiable, Hashable {
     let translate: String // перевод слова на родном языке
     // let image: Image
     
-//    init(word: String, translate: String) {
-//        self.word = word
-//        self.translate = translate
+//    init(title: String, subtitle: String) {
+//        self.word = title
+//        self.translate = subtitle
 //    }
 }
