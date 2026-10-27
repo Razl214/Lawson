@@ -8,7 +8,7 @@
 import Observation
 import SwiftUI
 
-
+@MainActor
 @Observable// Observation работает через отслеживание того, какие observable properties реально читает View. Apple прямо отмечает, что при @Observable SwiftUI обновляет View, когда изменяется observable property, которую читает body.
 final class WordsStore {
     

@@ -34,8 +34,8 @@ enum AlertSelectionActions {
 @Observable
 final class AddNewWordVM {
 
-   private let store: WordsStore // is it computed property?
-    //that instance need call property and methods WordsStore's class
+   private let store: WordsStore // это вычисляемое свойство?
+    //или этот экхемпляр нужен только для вызова методов WordsStore?
 
     var isError: Bool = false
     var errorMessage: String = ""

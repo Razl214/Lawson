@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AllWordsView: View {
     
-    @ObservedObject var vm: AllWordsVM
+    var vm: AllWordsVM
     
     @State private var searchText: String = ""
     @State private var isShowingAddSheet = false
